@@ -60,6 +60,7 @@ class TTT
                 if (this.calculateWinner() == true)
                 {
                     this.highlightWinner();
+                    this.disableAll();
                 }
                 // If calculateWinner returns true
                 // highlight the winner and disable all of the squares
@@ -72,17 +73,18 @@ class TTT
                     let a = this.lines[i][0];
                     let b = this.lines[i][1];
                     let c = this.lines[i][2];       
-                    if (this.squares[a] && 
-                    this.squares[a] === this.squares[b] && 
-                    this.squares[a] === this.squares[c]) {
-                        this.winner = this.squares[a];
-                        this.winningLine = this.lines[i];
+                    if ((this.squares[a].innerHTML ==="X" || this.squares[a].innerHTML === "O") &&
+                        this.squares[a].innerHTML === this.squares[b].innerHTML && 
+                        this.squares[a].innerHTML === this.squares[c].innerHTML) {
+                        this.winner = this.squares[a].innerHTML;
+                        this.winningLine = this.lines[i].innerHTML;
                         return true;
                     }
                 }
                 this.winner = null;
                 this.winningLine = Array();
                 return false;
+                
             }
             
             //
@@ -97,7 +99,7 @@ class TTT
             }
             
             disableAll() {
-                let squareBoard = document.getElementById('square');
+                let squareBoard = document.getElementById('square').innerHTML;
                 for (let i = 0; i < this.squareBoard.length; i++)
                 {
                     squareBoard[i].onclick = () => {};

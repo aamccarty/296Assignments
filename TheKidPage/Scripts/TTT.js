@@ -47,9 +47,9 @@ class TTT {
             this.xIsNext = true;
             document.getElementById('status').innerHTML = "Next Player: X";
         }
-        this.onclick = () => { };
-        if (this.calculateWinner() == true) {
-            this.highlightWinner();
+       this.onclick = () => { };
+       if (this.calculateWinner() == true) {
+           this.highlightWinner();
         }
         
     }

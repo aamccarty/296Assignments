@@ -7,7 +7,7 @@ namespace TheKidPage.Models
 {
     public class Repository
     {
-        private static List<JokeForm> responses = new List<JokeForm>();
+        public static List<JokeForm> responses = new List<JokeForm>();
 
         public static IEnumerable<JokeForm> Responses
         {

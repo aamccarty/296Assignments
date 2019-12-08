@@ -12,7 +12,7 @@
 </head>
 <body>
     <div class="panel panel-success">
-        <div class="panel-heading text-center"><h4>Want to join our league?</h4></div>"
+        <div class="panel-heading text-center"><h4>Have A Joke?</h4></div>
         <div class="panel-body">
             <form class="p-a-1" asp-action="Contact" method="post">
                 <div class="form-group">
@@ -26,6 +26,11 @@
                 <div class="form-group">
                     <label asp-for="Phone"> Your Phone please:</label>
                     <input class="form-control" asp-for="Phone" />
+                </div>
+                <div class="form-group">
+                    <label asp-for="Keyword">Joke about?(one word)</label>
+                    <textarea class="form-control" rows="5" asp-for="Keyword"></textarea>
+
                 </div>
                 <div class="form-group">
                     <label asp-for="Joke">Leave Your Joke here for Reivew</label>
