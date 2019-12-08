@@ -1,8 +1,20 @@
-﻿
+﻿@model List<Jokes>
 @{
     ViewData["Title"] = "Jokes";
     Layout = "~/Views/Shared/_JokesLayout.cshtml";
 }
-    <a class="nav-link" asp-controller="Jokes" asp-action="JokeForm">Submit a Joke</a>
-<h1>Jokes</h1>
+    <body>
+        <div>
+            @foreach (Jokes jokes in Model)
+            {
+                <h2> @jokes.Keyword </h2>
+
+            }
+
+            <br />
+            <a class="nav-link" asp-controller="Jokes" asp-action="JokeForm">Submit a Joke</a>
+
+        </div>
+
+    </body>
 
