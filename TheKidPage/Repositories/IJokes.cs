@@ -9,8 +9,8 @@ namespace TheKidPage.Models
     {
         List<Jokes> Jokes { get; }
         void AddJoke(Jokes joke);
-        void AddUser(Jokes joke, User user);
-        Jokes GetJokeByLetter(string title);
+        /*void AddUser(Jokes joke, User user);
+        Jokes GetJokeByLetter(string title); =*/
     }
 }
 

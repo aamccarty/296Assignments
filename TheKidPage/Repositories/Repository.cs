@@ -20,12 +20,12 @@ namespace TheKidPage.Models
             context = applicationDbContext;
         }
 
-        public void AddJoke(Jokes jokes)
+        public void AddJoke(Jokes responses)
         {
-            context.Jokes.Add(jokes);
+            context.Jokes.Add(responses);
             context.SaveChanges();
         }
-
+        /*
         public void AddUser(User user)
         {
             user.User.Add(user);
@@ -39,16 +39,19 @@ namespace TheKidPage.Models
             jokes = context.Jokes.First(b => b.KeyWord.First == letter);
             return jokes;
         }
-        public static IEnumerable<JokeForm> Responses
+        */
+        public static IEnumerable<Jokes> Responses
         {
             get
             {
                 return responses;
             }
         }
-        public static void AddResponse(JokeForm response)
+        public static void AddResponse(Jokes response)
         {
             responses.Add(response);
         }
+
+
     }
 }

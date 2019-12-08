@@ -11,7 +11,7 @@ namespace TheKidPage.Controllers
     {
         public IActionResult Jokes()
         {
-            return View();
+            return View(Repository.Responses);
         }
         [HttpGet]
         public ViewResult JokeForm()
@@ -19,10 +19,10 @@ namespace TheKidPage.Controllers
             return View();
         }
         [HttpPost]
-        public ViewResult JokeForm(JokeForm jokeform)
+        public ViewResult JokeForm(Jokes jokes)
         {
-            Repository.AddResponse(jokeform);
-            return View("Thanks", jokeform);
+            Repository.AddResponse(jokes);
+            return View("Jokes", jokes);
         }
     }
 }
