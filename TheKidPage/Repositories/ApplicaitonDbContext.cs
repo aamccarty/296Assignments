@@ -4,6 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using TheKidPage.Models;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.SqlServer;
 
 
 namespace TheKidPage.Repositories
@@ -13,7 +14,7 @@ namespace TheKidPage.Repositories
             public ApplicaitonDbContext(
                DbContextOptions<ApplicaitonDbContext> options) : base(options) { }
 
-            public DbSet<Jokes> Jokes { get; set; }
+            public DbSet<Joke> Jokes { get; set; }
             public DbSet<User> Users { get; set; }
            
            

@@ -34,6 +34,6 @@ C:\Users\spoot\Desktop\Last year of School\TheKidPage\TheKidPage\obj\Debug\netco
 C:\Users\spoot\Desktop\Last year of School\TheKidPage\TheKidPage\obj\Debug\netcoreapp2.2\Razor\Views\Home\Games.cshtml.g.cs
 C:\Users\spoot\Desktop\Last year of School\TheKidPage\TheKidPage\obj\Debug\netcoreapp2.2\Razor\Views\Home\Crafts.cshtml.g.cs
 C:\Users\spoot\Desktop\Last year of School\TheKidPage\TheKidPage\obj\Debug\netcoreapp2.2\Razor\Views\Jokes\JokeForm.cshtml.g.cs
-C:\Users\spoot\Desktop\Last year of School\TheKidPage\TheKidPage\obj\Debug\netcoreapp2.2\Razor\Views\Jokes\Jokes.cshtml.g.cs
 C:\Users\spoot\Desktop\Last year of School\TheKidPage\TheKidPage\obj\Debug\netcoreapp2.2\Razor\Views\Shared\_JokesLayout.cshtml.g.cs
 C:\Users\spoot\Desktop\Last year of School\TheKidPage\TheKidPage\obj\Debug\netcoreapp2.2\Razor\Views\Jokes\Thanks.cshtml.g.cs
+C:\Users\spoot\Desktop\Last year of School\TheKidPage\TheKidPage\obj\Debug\netcoreapp2.2\Razor\Views\Jokes\Jokespage.cshtml.g.cs

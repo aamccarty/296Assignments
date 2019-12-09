@@ -10,48 +10,48 @@ namespace TheKidPage.Models
 {
     public class Repository : IJokes
     {
-        public static List<Jokes> responses = new List<Jokes>();
-
         private ApplicaitonDbContext context;
-        public List<Jokes> Jokes { get { return context.Jokes.Include("User").ToList(); } }
+        public List<Joke> Jokes { get { return context.Jokes.Include("Users").ToList(); } }
 
-        public Repository(ApplicaitonDbContext applicationDbContext)
+        public Repository(ApplicaitonDbContext appDbContext)
         {
-            context = applicationDbContext;
+            context = appDbContext;
         }
 
-        public void AddJoke(Jokes responses)
+        public void AddJoke(Joke joke)
         {
-            context.Jokes.Add(responses);
-            context.SaveChanges();
-        }
-        /*
-        public void AddUser(User user)
-        {
-            user.User.Add(user);
-            context.Joke.Update(user);
+            context.Jokes.Add(joke);
             context.SaveChanges();
         }
 
-        public Jokes GetJokesByLetter(char letter)
+        public void AddUser(Joke joke, User user)
         {
-            Jokes jokes;
-            jokes = context.Jokes.First(b => b.KeyWord.First == letter);
-            return jokes;
-        }
-        */
-        public static IEnumerable<Jokes> Responses
-        {
-            get
-            {
-                return responses;
-            }
-        }
-        public static void AddResponse(Jokes response)
-        {
-            responses.Add(response);
+            joke.Users.Add(user);
+            context.Jokes.Update(joke);
+            context.SaveChanges();
         }
 
+        public Joke GetJokeByKeyWord(string title)
+        {
+            Joke joke;
+            joke = context.Jokes.First(b => b.KeyWord == title);
+            return joke;
+        }
 
     }
+    /*
+     public static IEnumerable<Jokes> Responses
+     {
+         get
+         {
+             return responses;
+         }
+     }
+     public static void AddResponse(Jokes response)
+     {
+         responses.Add(response);
+     }*/
+
+
 }
+

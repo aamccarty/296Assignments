@@ -9,20 +9,59 @@ namespace TheKidPage.Controllers
 {
     public class JokesController : Controller
     {
-        public IActionResult Jokes()
+        IJokes repo;
+        public JokesController(IJokes r)
         {
-            return View(Repository.Responses);
+            repo = r;
         }
-        [HttpGet]
-        public ViewResult JokeForm()
+
+        public IActionResult JokesPage()
+        {
+            List<Joke> jokes = repo.Jokes;
+            jokes.Sort((b1, b2) => string.Compare(b1.KeyWord, b2.KeyWord, StringComparison.Ordinal));
+            return View(jokes);
+        }
+
+        public IActionResult JokeForm()
         {
             return View();
         }
+
+
         [HttpPost]
-        public ViewResult JokeForm(Jokes jokes)
+        public RedirectToActionResult JokeForm(string name,
+                                              string keyword, string pubDate)
         {
-            Repository.AddResponse(jokes);
-            return View("Jokes", jokes);
+            Joke joke = new Joke { KeyWord = keyword };
+            joke.Users.Add(new User() { Name = name });
+            /*joke.PubDate = DateTime.Parse(pubDate);*/
+            repo.AddJoke(joke);  // this is temporary, in the future the data will go in a database
+
+            return RedirectToAction("Jokespage");
         }
+
+
+       
     }
+    /*public IActionResult Jokespage()
+    {
+        return View(Repository.responses);
+    }
+    [HttpGet]
+    public ViewResult JokeForm()
+    {
+        return View();
+    }
+    [HttpPost]
+    public RedirectToActionResult JokeForm(string title,
+                                          string author, string pubDate)
+    {
+        Book book = new Book { Title = title };
+        book.Authors.Add(new Author() { Name = author });
+        book.PubDate = DateTime.Parse(pubDate);
+        repo.AddBook(book);  // this is temporary, in the future the data will go in a database
+
+        return RedirectToAction("Jokespage");
+    }
+}*/
 }

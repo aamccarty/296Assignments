@@ -7,10 +7,10 @@ namespace TheKidPage.Models
 {
     public interface IJokes
     {
-        List<Jokes> Jokes { get; }
-        void AddJoke(Jokes joke);
-        /*void AddUser(Jokes joke, User user);
-        Jokes GetJokeByLetter(string title); =*/
+        List<Joke> Jokes { get; }
+        void AddJoke(Joke joke);
+        void AddUser(Joke joke, User user);
+        Joke GetJokeByKeyWord(string title); 
     }
 }
 
