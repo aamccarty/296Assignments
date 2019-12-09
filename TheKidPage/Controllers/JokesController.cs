@@ -30,11 +30,14 @@ namespace TheKidPage.Controllers
 
         [HttpPost]
         public RedirectToActionResult JokeForm(string name,
-                                              string keyword, string pubDate)
+                                              string keyword, string jokeline)
         {
             Joke joke = new Joke { KeyWord = keyword };
-            joke.Users.Add(new User() { Name = name });
-            /*joke.PubDate = DateTime.Parse(pubDate);*/
+            joke.Name = name;
+            joke.JokeLine = jokeline;
+
+            /*joke.Joke.Add(new Joke() { Name = name });
+            joke.PubDate = DateTime.Parse(pubDate);*/
             repo.AddJoke(joke);  // this is temporary, in the future the data will go in a database
 
             return RedirectToAction("Jokespage");
@@ -43,25 +46,5 @@ namespace TheKidPage.Controllers
 
        
     }
-    /*public IActionResult Jokespage()
-    {
-        return View(Repository.responses);
-    }
-    [HttpGet]
-    public ViewResult JokeForm()
-    {
-        return View();
-    }
-    [HttpPost]
-    public RedirectToActionResult JokeForm(string title,
-                                          string author, string pubDate)
-    {
-        Book book = new Book { Title = title };
-        book.Authors.Add(new Author() { Name = author });
-        book.PubDate = DateTime.Parse(pubDate);
-        repo.AddBook(book);  // this is temporary, in the future the data will go in a database
-
-        return RedirectToAction("Jokespage");
-    }
-}*/
+    
 }
