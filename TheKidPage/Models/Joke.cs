@@ -10,14 +10,11 @@ namespace TheKidPage.Models
     {
         public int JokeID { get; set; }
         private List<User> users = new List<User>();
-        [StringLength(100, MinimumLength = 2)]
-        [Required]
         public string Name { get; set; }
-        [StringLength(100, MinimumLength = 2)]
+        [StringLength(100, MinimumLength = 4)]
         [Required]
         public string KeyWord { get; set; }
-        [StringLength(100, MinimumLength = 2)]
-        [Required]
+        
         public string JokeLine { get; set; }
         [DataType(DataType.Date)]
         [DisplayFormat(DataFormatString = "{0:yyyy}", ApplyFormatInEditMode = true)]

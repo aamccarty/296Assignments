@@ -32,14 +32,16 @@ namespace TheKidPage.Controllers
         public RedirectToActionResult JokeForm(string name,
                                               string keyword, string jokeline)
         {
-            Joke joke = new Joke { KeyWord = keyword };
-            joke.Name = name;
-            joke.JokeLine = jokeline;
+            if (ModelState.IsValid)
+            {
+                Joke joke = new Joke { KeyWord = keyword };
+                joke.Name = name;
+                joke.JokeLine = jokeline;
 
-            /*joke.Joke.Add(new Joke() { Name = name });
-            joke.PubDate = DateTime.Parse(pubDate);*/
-            repo.AddJoke(joke);  // this is temporary, in the future the data will go in a database
-
+                /*joke.Joke.Add(new Joke() { Name = name });
+               joke.PubDate = DateTime.Parse(pubDate);*/
+                repo.AddJoke(joke);  // this is temporary, in the future the data will go in a database
+            }
             return RedirectToAction("Jokespage");
         }
 
