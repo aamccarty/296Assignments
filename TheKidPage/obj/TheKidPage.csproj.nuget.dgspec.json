@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\spoot\\Desktop\\Last year of School\\TheKidPage\\TheKidPage\\TheKidPage.csproj": {}
+    "C:\\Users\\spoot\\Desktop\\Last year of School\\Fall2019\\TheKidPage\\TheKidPage\\TheKidPage.csproj": {}
   },
   "projects": {
-    "C:\\Users\\spoot\\Desktop\\Last year of School\\TheKidPage\\TheKidPage\\TheKidPage.csproj": {
+    "C:\\Users\\spoot\\Desktop\\Last year of School\\Fall2019\\TheKidPage\\TheKidPage\\TheKidPage.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\spoot\\Desktop\\Last year of School\\TheKidPage\\TheKidPage\\TheKidPage.csproj",
+        "projectUniqueName": "C:\\Users\\spoot\\Desktop\\Last year of School\\Fall2019\\TheKidPage\\TheKidPage\\TheKidPage.csproj",
         "projectName": "TheKidPage",
-        "projectPath": "C:\\Users\\spoot\\Desktop\\Last year of School\\TheKidPage\\TheKidPage\\TheKidPage.csproj",
+        "projectPath": "C:\\Users\\spoot\\Desktop\\Last year of School\\Fall2019\\TheKidPage\\TheKidPage\\TheKidPage.csproj",
         "packagesPath": "C:\\Users\\spoot\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\spoot\\Desktop\\Last year of School\\TheKidPage\\TheKidPage\\obj\\",
+        "outputPath": "C:\\Users\\spoot\\Desktop\\Last year of School\\Fall2019\\TheKidPage\\TheKidPage\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\spoot\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -44,14 +44,11 @@
               "version": "[2.2.0, )",
               "autoReferenced": true
             },
-            "Microsoft.AspNetCore.Blazor": {
-              "target": "Package",
-              "version": "[0.7.0, )"
-            },
-            "Microsoft.AspNetCore.Razor.Design": {
+            "Microsoft.EntityFrameworkCore.Design": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
               "suppressParent": "All",
               "target": "Package",
-              "version": "[2.2.0, )"
+              "version": "[2.2.6, )"
             },
             "Microsoft.NETCore.App": {
               "suppressParent": "All",
@@ -59,9 +56,9 @@
               "version": "[2.2.0, )",
               "autoReferenced": true
             },
-            "Microsoft.VisualStudio.Web.CodeGeneration.Design": {
+            "Pomelo.EntityFrameworkCore.MySql": {
               "target": "Package",
-              "version": "[2.2.4, )"
+              "version": "[2.2.6, )"
             }
           },
           "imports": [
@@ -74,7 +71,7 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.0.100\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.100\\RuntimeIdentifierGraph.json"
         }
       }
     }
