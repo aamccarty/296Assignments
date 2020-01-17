@@ -10,10 +10,13 @@ namespace TheKidPage.Models
     {
         public int JokeID { get; set; }
         private List<User> users = new List<User>();
+        [RegularExpression("^[A-Z]+[a-zA-Z]*$")]
+        [StringLength(50, MinimumLength = 2)]
         public string Name { get; set; }
         [StringLength(100, MinimumLength = 4)]
         [Required]
         public string KeyWord { get; set; }
+
         
         public string JokeLine { get; set; }
         [DataType(DataType.Date)]
