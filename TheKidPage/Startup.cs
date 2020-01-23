@@ -74,7 +74,7 @@ namespace TheKidPage
             app.UseHttpsRedirection();
             app.UseStaticFiles();
             app.UseCookiePolicy();
-
+            app.UseStatusCodePages();
             app.UseMvc(routes =>
             {
                 routes.MapRoute(
@@ -87,6 +87,7 @@ namespace TheKidPage
 
             // Add a book and review or two as sample/test data.
             SeedData.Seed(context);
+            app.UseAuthentication();
         }
 
     }
