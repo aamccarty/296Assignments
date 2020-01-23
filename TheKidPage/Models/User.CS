@@ -13,8 +13,7 @@ namespace TheKidPage.Models
         [StringLength(100, MinimumLength = 4)]
         [Required]
         public string Email { get; set; }
-        [StringLength(100, MinimumLength = 4)]
-        [Required]
+        
         public string Phone { get; set; }
 
     }
